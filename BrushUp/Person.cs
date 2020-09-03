@@ -2,17 +2,24 @@
 
 namespace BrushUp
 {
+    public enum GenderType
+    {
+        male,
+        female
+    };
+
     public class Person
     {
         private string _name;
         private string _address;
-        private GenderType _gender;
+        private GenderType _genderType;
 
-        public Person(string name, string address, GenderType gender)
+        public Person(string name, string address, GenderType genderType)
         {
             _name = name;
             _address = address;
-            _gender = gender;
+            _genderType = genderType;
+
         }
 
         public string Name
@@ -36,11 +43,15 @@ namespace BrushUp
             }
         }
 
-        public GenderType Gender { get; set; }
-
-        public override string ToString()
+        public  GenderType Gender
         {
-            return base.ToString();
+            get { return _genderType; }
+            set { _genderType = value; }
+        }
+        public virtual string ToString()
+        {
+            return "";
         }
     }
-}
+        
+    }

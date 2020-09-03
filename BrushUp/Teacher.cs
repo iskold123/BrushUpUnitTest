@@ -4,11 +4,6 @@ using System.Text;
 
 namespace BrushUp
 {
-    public enum GenderT
-    {
-        Male,
-        Female
-    }
 
     public class Teacher : Person
     {
@@ -24,17 +19,14 @@ namespace BrushUp
             }
         }
 
-        public Teacher(string name, string address, int salary, GenderT gender) : base(name, address, gender)
+        public Teacher(string name, string address, int salary) : base(name, address, GenderType.male)
         {
             _salary = salary;
         }
 
-        public GenderT Gender { get; set; }
-
         public override string ToString()
         {
-            return Name + " " + Salary;
-
+            return ($"mit navn er {Name}");
         }
     }
 }

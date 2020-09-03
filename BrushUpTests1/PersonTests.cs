@@ -9,16 +9,24 @@ namespace BrushUp.Tests
     [TestClass()]
     public class PersonTests
     {
-        [TestMethod()]
-        public void PersonTest()
+        private Person p1;
+        [TestInitialize]
+        //Initialisere s1 objekt så der konstant bliver oprettet et nyt hver gang
+        public void Init()
         {
-            Assert.Fail();
+            p1 = new Person("mads", "maglehøjen", GenderType.male);
         }
 
-        [TestMethod()]
-        public void ToStringTest()
+        [TestMethod]
+        public void ToString()
         {
-            Assert.Fail();
+            Assert.AreEqual("mads",p1.Name);
+        }
+
+        [TestMethod]
+        public void GenderTest()
+        {
+            Assert.AreEqual(GenderType.male, p1.Gender);
         }
     }
 }

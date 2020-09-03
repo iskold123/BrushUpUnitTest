@@ -14,7 +14,7 @@ namespace BrushUp.Tests
         [TestInitialize]
         public void Init()
         {
-            t1 = new Teacher("Jacob", "maglegårdsvej", 10000, GenderT.Male);
+            t1 = new Teacher("Jacob", "maglegårdsvej", 10000);
         }
 
         [TestMethod()]
@@ -45,12 +45,6 @@ namespace BrushUp.Tests
             Assert.AreEqual(10000,t1.Salary);
 
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => t1.Salary = -1);
-        }
-
-        [TestMethod()]
-        public void GenderTest()
-        {
-            t1.Gender = GenderT.Male;
         }
 
         //[TestMethod()]

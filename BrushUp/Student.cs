@@ -5,12 +5,6 @@ using System.Threading;
 
 namespace BrushUp
 {
-    public enum GenderType
-    {
-        Male,
-        Female
-    }
-
     public class Student : Person
     {
         private int _semester;
@@ -31,8 +25,14 @@ namespace BrushUp
             }
         }
 
-        public Student(string name, string address, int semester, GenderType gender) : base(name, address, gender)
+        public Student(string name, string address, int semester) : base(name, address, GenderType.female)
         {
+            _semester = semester;
+        }
+
+        public override string ToString()
+        {
+            return $"mit navn er {Name}";
         }
     }
 }

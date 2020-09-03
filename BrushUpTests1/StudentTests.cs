@@ -15,7 +15,7 @@ namespace BrushUp.Tests
         //Initialisere s1 objekt så der konstant bliver oprettet et nyt hver gang
         public void Init()
         {
-            s1 = new Student ("mads", "Maglehøjen", 3, GenderType.Male);
+            s1 = new Student ("mads", "Maglehøjen", 3);
         }
 
         [TestMethod()]
@@ -47,17 +47,5 @@ namespace BrushUp.Tests
             Assert.ThrowsException<ArgumentException>(() => s1.Semester = 9);
 
         }
-
-        [TestMethod()]
-        public void GenderTest()
-        {
-            s1.Gender = GenderType.Male;
-        }
-
-        //[TestMethod()]
-        //public void ToStringTest()
-        //{
-
-        //}
     }
 }
