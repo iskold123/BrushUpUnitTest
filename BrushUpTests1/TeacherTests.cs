@@ -46,11 +46,5 @@ namespace BrushUp.Tests
 
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => t1.Salary = -1);
         }
-
-        //[TestMethod()]
-        //public void ToStringTest()
-        //{
-        //    Assert.Fail();
-        //}
     }
 }
